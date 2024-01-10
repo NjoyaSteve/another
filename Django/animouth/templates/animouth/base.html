@@ -1,0 +1,95 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      {%if title%}
+      <title>{{title}}</title>
+      {% else%}
+      <title>Document</title>
+      {% endif%}
+      <link rel="stylesheet" href="{% static 'animouth/css/style.css'%}">
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="logo">
+          <img src="{% static 'animouth/images/logo_AniMouth - Copie.svg'%}" class="menu_icons" alt="logo AniMouth">
+      </div>
+      <div class="menu">
+          <ul>
+              <li><a href="#">Univers</a></li>
+              <li><a href="#">Personnalisation</a></li>
+              <li><a href="#">My AniMouth <i class="fa fa-user" aria-hidden="true"></i></a></li>
+              <li><a href="#"> Aide <i class="fa fa-question" aria-hidden="true"></i></a></li>
+          </ul>
+      </div>
+      
+      </div>
+      <!-- Search Box-->
+      <div class="s_box">
+          <input type="checkbox" id="check">
+          <div class="search-box">
+              <input type="text" placeholder="Que recherchez-vous ?">
+              <label for="check" class="icon">
+                  <i class="fas fa-search"></i> 
+              </label>
+          </div>
+      </div>
+    </header>
+
+    <!-- Header -->
+
+<!-- home -->
+    <div class="container mt-4 col-8">
+        {%block content%}
+        {%endblock content%}
+    </div>
+<!-- Footer -->
+<footer>
+  <div class="div1">
+      <p>Êtes-vous satisfaits ? Votre avis nous intéresse !! suivez nous et échangez avec la communauté AniMouth !</p>
+  </div>     
+  <div class="div2">
+      <div>
+          <h3>Nos Services</h3>
+          <ul>
+              <a href="#">Vente de masques</a>
+              <a href="#">Livraisons</a>
+              <a href="#">Personnalisations</a>
+              <a href="#">Evenements</a>
+              <a href="#">Jeux concours</a>
+          </ul>
+      </div>
+      <div>
+          <h3>Nous Contacter c'est nous rejoindre</h3>
+          <ul>
+              <div class="socials">
+                  <img src="{%static 'animouth/images/socials/instagram.png'%}" alt="Instagram icon">
+                  <a target="_blank" href="https://instagram.com/animouth_cmr?igshid=M2RkZGJiMzhjOQ=="> Instagram</a>
+              </div>
+              <div class="socials">
+                  <img src="{% static 'animouth/images/socials/facebook.png'%}" alt="facebook icon">
+                  <a target="_blank" href="#"> Facebook</a>
+              </div>
+              <div class="socials">
+                  <img src="{% static 'animouth/images/socials/twitter.png'%}" alt="X icon">
+                  <a target="_blank" href="#"> X/twitter</a>
+              </div>
+              <div class="socials">
+                  <img src="{% static 'animouth/images/socials/Whatsapp.png'%}" alt="Whatsapp icon">
+                  <a target="_blank" href="https://wa.me/655921477"> Whatsapp</a>
+              </div>
+          </ul>
+      </div>
+  </div>
+  <hr>
+  <div class="div3">
+      <p>Protegez vous et votre entourage tout en affirmant votre style 😉</p>
+      <p>&copy;2023 Vinsmoke's Corp</p>
+  </div>
+</footer>
+<!-- Footer -->
+  </body>
+</html>

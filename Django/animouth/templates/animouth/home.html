@@ -1,0 +1,12 @@
+{% extends 'animouth/base.html'%}
+<!-- -->
+
+{%block content%}
+    <h1>Animouth !!</h1>
+    {% for animouth in animouths %}
+        <h1>{{animouth.title }}</h1>
+        <p>{{animouth.author}} | {{animouth.date_posted}} </p>
+        <p>{{animouth.directions}}</p>
+    {% endfor %}
+{%endblock content%}
+
